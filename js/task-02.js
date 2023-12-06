@@ -1,22 +1,33 @@
 
 const images = [
-  {
-    url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
-    alt: "White and Black Long Fur Cat",
-  },
-  {
-    url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
-    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
-  },
-  {
-    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
-    alt: "Group of Horses Running",
-  },
+{
+url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+alt: 'White and Black Long Fur Cat',
+},
+{
+url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+},
+{
+url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+alt: 'Group of Horses Running',
+},
+{
+url:
+'https://images.pexels.com/photos/66898/elephant-cub-tsavo-kenya-66898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+alt: 'Elephant Beside on Baby Elephant',
+},
+{
+url:
+'https://images.pexels.com/photos/37833/rainbow-lorikeet-parrots-australia-rainbow-37833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+alt: 'Blue Geeen and Orange Parrot',
+},
+{
+url:
+'https://images.pexels.com/photos/247376/pexels-photo-247376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+alt: 'Zebras on Zebra',
+},
 ];
-
-
- 
-
 
 const ulEl = document.querySelector('.gallery');
 const createGalEl = images.map
@@ -25,8 +36,8 @@ const createGalEl = images.map
   src=${item.url} 
   alt=${item.alt} width=360 height=240/></li>`)
   .join('');
-ulEl.insertAdjacentHTML('afterbegin', createGalEl)
- 
+ulEl.insertAdjacentHTML('afterbegin', createGalEl);
+
 const galleryRef = document.querySelector(".gallery");
 galleryRef.classList.add("js-gallery");
 const headRef = document.querySelector("head");
@@ -36,23 +47,17 @@ headRef.insertAdjacentHTML(
   `<style>
 .js-gallery {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
   list-style: none;
+  justify-content: center;
 }
 .js-gallery > li > img {
-  max-width: 80%;
-  border-radius: 50pt;
-  border: solid 2px #551a8b;
+  max-width: 90%;
+  border-radius: 10pt;
+  border: solid 2px #00ffff;
 }
 </style>`
 );
 
-const imagesRef = images.map((value, idx, arr) => {
-  const src = arr[idx]["url"];
-  const alt = arr[idx]["alt"];
-  const li = `<li><img src="${src}" alt="${alt}"></li>`;
-  return li;
-});
-
-console.log("imagesRef: ", imagesRef);
-galleryRef.insertAdjacentHTML("afterbegin", imagesRef.join(""));
