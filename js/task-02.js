@@ -34,7 +34,7 @@ const createGalEl = images.map
   (item => 
   `<li><img 
   src=${item.url} 
-  alt=${item.alt} width=360 height=240/></li>`)
+  alt=${item.alt} width=360 height=300/></li>`)
   .join('');
 ulEl.insertAdjacentHTML('afterbegin', createGalEl);
 
@@ -47,16 +47,28 @@ headRef.insertAdjacentHTML(
   `<style>
 .js-gallery {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  gap: 24px;
-  list-style: none;
   justify-content: center;
+  width: 1440px;
+  height: 848px;
+  padding: 100px 156px;
+  column-gap: 24px;
+  row-gap: 48px;
+  list-style: none;
+  margin: 0 auto;
+}
+.js-gallery > li {
+  width: calc((100% - 48px) / 3);
+  box-sizing: border-box;
 }
 .js-gallery > li > img {
-  max-width: 90%;
-  border-radius: 10pt;
-  border: solid 2px #00ffff;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  box-shadow: 2px 5px 5px rgb(0, 0, 0, 0,5);
+  display: block;
+  object-fit: cover;
+  background: url(<path-to-image>), lightgray -76px -0.297px / 125.278% 100.198% no-repeat;
 }
 </style>`
 );
