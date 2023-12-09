@@ -1,6 +1,3 @@
-/* BASE */
-@import "./layout.css/list";
-
 body {
   color: #2e2f42;
   font-family: Montserrat, sans-serif;
@@ -9,6 +6,14 @@ body {
   background-color: #fafafa;
   line-height: 1.5;
   margin: 16px;
+  display: inline-flex;
+padding: 24px;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+
+border-radius: 8px;
+background: #FFF;
 }
 
 ul {
@@ -26,26 +31,69 @@ a {
   text-decoration: none;
 }
 
-img {
+/*img {
   display: block;
 }
-
+*/
 * {
   box-sizing: border-box;
 }
 
-input {
-  /*padding: 8px;
-  font: inherit;*/
+/*------ 3 завдання -----*/
+text {
+color: #2E2F42;
+
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+letter-spacing: 0.64px;
+}
+#name-inpup {
   width: 360px;
   height: 40px;
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid #808080;
+  padding: 0;
 }
-#name-inpup {
+#name-output {
+  display: inline-flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 8px;
+  background: #fff;
+  width: 360px;
+  height: 88px;
+}
+
+/*-----6 завдання ----*/
+#controls {
+  display: flex;
+  padding: 32px;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 8px;
+  width: 486px;
+  height: 104px;
+  background: rgba(246, 246, 254, 1);
+}
+
+input {
+  display: flex;
+  padding: 8px 72px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px solid #808080;
+  width: 150px;
+  height: 40px;
   color: #2e2f42;
-  font-family: Montserrat;
 
   font-family: Montserrat;
   font-size: 16px;
@@ -56,8 +104,42 @@ input {
 }
 
 button {
-  padding: 8px 12px;
   cursor: pointer;
+  color: #fff;
+
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+}
+[data-create] {
+  display: flex;
+  width: 120px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #4e75ff;
+  width: 120px;
+  height: 40px;
+  border-color: #4e75ff;
+}
+
+[data-destroy] {
+  display: flex;
+  width: 120px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #ff4e4e;
+  width: 120px;
+  height: 40px;
+  border-color: #ff4e4e;
 }
 
 a {
@@ -77,8 +159,9 @@ a:hover {
   background-color: black;
   color: white;
 }
-
-.submit {
+/*
+.submit,
+.login-form button {
   display: flex;
   padding: 8px 16px;
   justify-content: center;
@@ -87,12 +170,36 @@ a:hover {
   border-radius: 8px;
   background: #4e75ff;
   color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% *
+  letter-spacing: 0.64px;
+  max-width: 86px;
+  height: 40px;
+}
+
+.widget button {
+  border-radius: 8px;
+  background: #4e75ff;
+}
+
+.widget p {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% *
+  letter-spacing: 0.64px;
+}
+.change-color {
+  color: #fff;
+
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
+  line-height: 24px; /* 150% *
   letter-spacing: 0.64px;
-  width: 86px;
-  height: 40px;
 }

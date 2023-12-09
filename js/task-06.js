@@ -1,5 +1,4 @@
 
-
 const divBoxesRef = document.querySelector("#boxes");
 divBoxesRef.style.display = "flex";
 divBoxesRef.style.flexWrap = "wrap";
@@ -57,6 +56,7 @@ inputNumberRef.addEventListener("focus", (event) => {
 createBtnRef.addEventListener("click", () => {
   createBoxes(nClick);
   clearInput();
+  
 });
 
 destroyBtnRef.addEventListener("click", () => {
@@ -69,3 +69,4 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+

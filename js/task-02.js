@@ -44,7 +44,7 @@ const headRef = document.querySelector("head");
 
 headRef.insertAdjacentHTML(
   "beforeend",
-  `<style>
+ `<style> 
 .js-gallery {
   display: flex;
   flex-wrap: wrap;
