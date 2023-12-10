@@ -43,33 +43,29 @@ galleryRef.classList.add("js-gallery");
 const headRef = document.querySelector("head");
 
 headRef.insertAdjacentHTML(
-  "beforeend",
- `<style> 
+  "beforeend", `<style> 
 .js-gallery {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   width: 1440px;
-  height: 848px;
   padding: 100px 156px;
-  column-gap: 24px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
   row-gap: 48px;
-  list-style: none;
-  margin: 0 auto;
+  background: #fff;
+  flex-wrap: wrap;
 }
 .js-gallery > li {
   width: calc((100% - 48px) / 3);
   box-sizing: border-box;
-}
-.js-gallery > li > img {
-  width: 100%;
-  height: 100%;
+  height: 300px;
   flex-shrink: 0;
-  box-shadow: 2px 5px 5px rgb(0, 0, 0, 0,5);
-  display: block;
-  object-fit: cover;
-  background: url(<path-to-image>), lightgray -76px -0.297px / 125.278% 100.198% no-repeat;
+  padding: 0;
+  border-radius: 0%;
+  border: 0cap; 
 }
 </style>`
+ 
 );
 
