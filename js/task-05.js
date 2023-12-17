@@ -21,6 +21,9 @@ headRef.insertAdjacentHTML(
     border-radius: 8px;
     background: #4e75ff;
     cursor: pointer;
+    height: 40px;
+  }
+
   }
   .js-body > changeColor > button {
     font-size: 16px;
@@ -30,7 +33,7 @@ headRef.insertAdjacentHTML(
   padding: 100px 88px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 16px;
   border-radius: 8px;
   background: #fff;
   }

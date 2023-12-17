@@ -87,7 +87,8 @@ headRef.insertAdjacentHTML(
   }
 .js-body #controls input {
   display: flex;
-  padding: 8px 72px;
+  padding-top: 8px;
+  padding-left: 72px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
